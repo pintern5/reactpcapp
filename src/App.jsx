@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-// Adattömbök valós árakkal és relatív képeléréssel
 const processors = [
   { name: "AMD Ryzen 5 7600", price: 63990, img: "./src/assets/cpu.jpg" },
   { name: "Intel Core i5-14600K", price: 115000, img: "./src/assets/cpu.jpg" },
@@ -46,7 +45,6 @@ const keyboards = [
   { name: "Razer Cynosa V2", price: 22000, img: "./src/assets/bill.webp" },
 ];
 
-// Pontosan a te mintád alapján felépített választó komponens képpel bővítve
 const ComponentSelector = ({ name, options, selectedOption, onSelect }) => {
   return (
     <div>
@@ -67,7 +65,6 @@ const ComponentSelector = ({ name, options, selectedOption, onSelect }) => {
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-            {/* Képek lekorlátozása maximum 150x150 alá */}
             <img 
               src={option.img} 
               alt={option.name} 
@@ -81,7 +78,6 @@ const ComponentSelector = ({ name, options, selectedOption, onSelect }) => {
   );
 };
 
-// A fő App komponens
 export const App = () => {
   const [processor, setProcessor] = useState(null);
   const [gpu, setGpu] = useState(null);
